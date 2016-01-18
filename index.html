@@ -1,23 +1,278 @@
 ---
-layout: default
+layout: corporate-7
 ---
 
-<div class="home">
+<div class="_row hero-container">
+  <!--
+  <div class="hero-title">
+    <p>Handcrafted Web Apps</p>
+  </div>
+  -->
+  <div class="_col-xs-3 _col-xs-offset-1 hero-text">
+    <div class="container">
+      <h1>Custom Web Apps</h1>
+      <h2>Agile / Test-Driven / Customer-Centered</h2>
+      <p class="lead text-light"></p>
+    </div>
+  </div>
+  <div class="_col-xs-8 hero-unit">
+  </div>
+</div>
+{% comment %}<div class="slider-container rev_slider_wrapper" style="height: 760px;">{% endcomment %}
+{% comment %}{% include 'home-slider' %}{% endcomment %}
+{% comment %}
+	<div id="revolutionSlider" class="slider rev_slider" data-plugin-revolution-slider data-plugin-options='{"gridwidth": 800, "gridheight": 760}'>
+		<ul>
+			<li data-transition="fade">
+				<img src="//cdn.ezeratech.com/themes/porto/4_4_0/img/slides/slide-bg-full-3-dark.jpg"
+					alt=""
+					data-bgposition="center center"
+					data-bgfit="cover"
+					data-bgrepeat="no-repeat"
+					class="rev-slidebg">
 
-  <h1 class="page-heading">Posts</h1>
+				<div class="tp-caption"
+					data-x="center" data-hoffset="-150"
+					data-y="center" data-voffset="-95"
+					data-start="1000"
+					style="z-index: 5"
+					data-transform_in="x:[-300%];opacity:0;s:500;"><img src="//cdn.ezeratech.com/themes/porto/4_4_0/img/slides/slide-title-border.png" alt=""></div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+				<div class="tp-caption top-label"
+					data-x="center" data-hoffset="0"
+					data-y="center" data-voffset="-95"
+					data-start="500"
+					style="z-index: 5"
+					data-transform_in="y:[-300%];opacity:0;s:500;">DO YOU NEED A NEW</div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+				<div class="tp-caption"
+					data-x="center" data-hoffset="150"
+					data-y="center" data-voffset="-95"
+					data-start="1000"
+					style="z-index: 5"
+					data-transform_in="x:[300%];opacity:0;s:500;"><img src="//cdn.ezeratech.com/themes/porto/4_4_0/img/slides/slide-title-border.png" alt=""></div>
+
+				<div class="tp-caption main-label"
+					data-x="center" data-hoffset="0"
+					data-y="center" data-voffset="-45"
+					data-start="1500"
+					data-whitespace="nowrap"
+					data-transform_in="y:[100%];s:500;"
+					data-transform_out="opacity:0;s:500;"
+					style="z-index: 5"
+					data-mask_in="x:0px;y:0px;">WEB DESIGN?</div>
+
+				<div class="tp-caption bottom-label"
+					data-x="center" data-hoffset="0"
+					data-y="center" data-voffset="5"
+					data-start="2000"
+					style="z-index: 5"
+					data-transform_in="y:[100%];opacity:0;s:500;">Check out our options and features.</div>
+
+				<a class="tp-caption btn btn-lg btn-primary btn-slider-action"
+					data-hash
+					data-hash-offset="85"
+					href="#home-intro"
+					data-x="center" data-hoffset="0"
+					data-y="center" data-voffset="80"
+					data-start="2200"
+					data-whitespace="nowrap"
+					data-transform_in="y:[100%];s:500;"
+					data-transform_out="opacity:0;s:500;"
+					style="z-index: 5"
+					data-mask_in="x:0px;y:0px;">Get Started Now!</a>
+
+			</li>
+			<li data-transition="fade">
+				<img src="//cdn.ezeratech.com/themes/porto/4_4_0/img/slides/slide-bg-full-4-dark.jpg"
+					alt=""
+					data-bgposition="center center"
+					data-bgfit="cover"
+					data-bgrepeat="no-repeat"
+					class="rev-slidebg">
+
+				<div class="tp-caption featured-label"
+					data-x="center"
+					data-y="center" data-voffset="-45"
+					data-start="500"
+					style="z-index: 5"
+					data-transform_in="y:[100%];s:500;"
+					data-transform_out="opacity:0;s:500;">WELCOME TO PORTO</div>
+
+				<div class="tp-caption bottom-label"
+					data-x="center"
+					data-y="center" data-voffset="5"
+					data-start="1000"
+					data-transform_idle="o:1;"
+					data-transform_in="y:[100%];z:0;rZ:-35deg;sX:1;sY:1;skX:0;skY:0;s:600;e:Power4.easeInOut;"
+					data-transform_out="opacity:0;s:500;"
+					data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+					data-splitin="chars"
+					data-splitout="none"
+					data-responsive_offset="on"
+					style="font-size: 23px; line-height: 30px; z-index: 5"
+					data-elementdelay="0.05">The #1 Selling HTML Site Template on ThemeForest</div>
+			</li>
+		</ul>
+	</div>
+{% endcomment %}
+{% comment %}</div>{% endcomment %}
+<div class="home-intro home-intro-primary" id="home-intro">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-8">
+				<p>
+          Get your idea to your customer
+        <em class="text-light">
+          Faster
+        </em>
+        <span class="text-light">
+          ... and with more confidence
+        </span>
+				</p>
+
+			</div>
+			<div class="col-md-4">
+				<div class="get-started">
+					<a href="/contact-us" class="btn btn-lg btn-secondary">Get Started Now!</a>
+          <!--
+					<div class="learn-more text-light">or <a href="/get-started" class="text-light">learn more.</a></div>
+          -->
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="container">
+	<div class="row mb-lg">
+		<div class="col-md-12 center">
+			<h2 class="mb-xl">Our <strong>Services</strong></h2>
+		</div>
+    {% for service in contents.services %}
+      {% assign loop_cycle = forloop.index0 | modulo:2 %}
+      {% if loop_cycle == 0 %}
+    <div class="row {% if forloop.index0 == 0 %}pt-xl clearfix{%endif%}">
+      {% endif %}
+			<div class="col-md-6">
+        <div class="feature-box feature-box-style-2 {% cycle 'reverse', '' %} appear-animation" data-appear-animation="fadeIn{% cycle 'Left', 'Right' %}" data-appear-animation-delay="{{ forloop.index0 | divided_by:2 | times:300 }}">
+					<div class="feature-box-icon">
+            <i class="icon-{{ service.icon }} icons text-color-quaternary"></i>
+					</div>
+					<div class="feature-box-info">
+            <h4 class="mb-sm">{{ service.title }}</h4>
+            <p class="mb-lg">{{ service.short_description }}</p>
+					</div>
+				</div>
+			</div>
+      {% if loop_cycle == 1 %}
+    </div>
+      {% endif %}
     {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+    <!--
+		<div class="col-md-12 center mt-xl mb-sm">
+			<a class="btn btn-secondary mr-xs mb-sm appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="900">View More</a>
+		</div>
+    -->
+	</div>
+</div>
+<section class="section section-tertiary pb-none mb-none">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+        <h2 class="text-light"><strong>Who</strong> We Are</h2>
+				<p class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <!--
+          <a class="btn btn-secondary mt-lg mb-sm">View More</a>
+        -->
+			</div>
+			<div class="col-md-4 col-md-offset-1">
+				<img class="img-responsive appear-animation" src="" alt="" data-appear-animation="fadeInUp">
+			</div>
+		</div>
+	</div>
+</section>
+<section class="section section-background section-center mt-none" style="background-image: url(//cdn.ezeratech.com/themes/porto/4_4_0/img/patterns/swirl_pattern.png);">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<h2 class="heading-dark mt-xl">Our <strong>Clients</strong></h2>
+				<div class="owl-carousel owl-theme nav-bottom rounded-nav" data-plugin-options='{"items": 1, "loop": false}'>
+          {% for item in contents.testimonials %}
+					<div>
+						<div class="col-md-12">
+							<div class="testimonial testimonial-style-2 testimonial-with-quotes mb-none">
+								<div class="testimonial-author">
+                  <img src="{{ item.thumbnail.url | resize: '120x120#' }}" class="img-responsive img-circle" alt="">
+								</div>
+								<blockquote>
+                  <p>{{ item.quote }}</p>
+								</blockquote>
+								<div class="testimonial-author">
+                  <p><strong>{{ item.name }}</strong><span>{{ item.subtitle }}</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+          {% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 center mb-xl">
+			<h2 class="mt-xl">Recent <strong>Projects</strong></h2>
+      <div class="owl-carousel owl-theme mb-none" data-plugin-options='{"items": 4, "margin": 0, "loop": false}'>
+        {% for item in contents.portfolio_items %}
+				<div>
+          <a href="{{ item.url }}">
+            <img src="{{ item.thumbnail.url | resize: '570x430#' }}" class="img-responsive" alt="">
+					</a>
+				</div>
+        {% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+<section class="section section-primary">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="mb-xs">Our <strong>Blog</strong></h2>
+				<div class="row">
+					{% for item in contents.blog_entries limit: 4 order_by: published_at.desc %}
+					<div class="col-md-4">
+						<div class="recent-posts mt-xl">
+							<article class="post">
+								<div class="date">
+									<span class="day">{{ item.published_at | date: '%d'}}</span>
+									<span class="month background-color-secondary">{{ item.published_at | date: '%b'}}</span>
+								</div>
+								<h4><a href="{{ item.url }}" class="text-light">{{ item.title }}</a></h4>
+								<p>{{ item.content | strip_html | truncatewords: 15 }}</p>
+								<a href="{{ item.url }}" class="btn btn-secondary mt-md mb-xl">Read More</a>
+							</article>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-md-6">
+			</div>
+		</div>
+	</div>
+</section>
+<div class="container">
+	<div class="row center mt-xl">
+		<div class="owl-carousel owl-theme" data-plugin-options='{"items": 6, "autoplay": true, "autoplayTimeout": 3000}'>
+      {% for capability in contents.capabilities %}
+			<div>
+          <img class="img-responsive" src="{{ capability.grayscale_image.url }}" alt="">
+        </div>
+        {% endfor %}
+		</div>
+	</div>
 </div>

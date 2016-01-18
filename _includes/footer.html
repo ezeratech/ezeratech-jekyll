@@ -1,38 +1,105 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-ribbon">
+        <span>Get in Touch</span>
       </div>
+      <div class="col-md-3">
+        <div class="newsletter">
+          <h4>Newsletter</h4>
+          <p>Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.</p>
+        <!-- Begin MailChimp Signup Form -->
+        <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            #mc_embed_signup{background: transparent; clear:left; font:14px Helvetica,Arial,sans-serif;}
+            /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+               We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+        </style>
+        <div id="_mc_embed_signup">
+        <form action="http://ezeratech.us3.list-manage.com/subscribe/post?u=fa20813893706f53e24d47d59&amp;id=d7485394f6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="" _lpchecked="1">
+          <div class="input-group">
+            <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required="">
 
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
+            <span class="input-group-btn">
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+              <!--<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">-->
+            </span>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_fa20813893706f53e24d47d59_d7485394f6" value=""></div>
+            </div>
+          </form>
+        </div>
+        <!--End mc_embed_signup-->
+        {% comment %}
+        {% if false %}
+        <form action='#'>
+          <div class='input-group'>
+            <input class='form-control' placeholder='youremail@mail.com' type='text'>
+            <span class='input-group-btn'>
+              <button class='btn btn-primary' type='submit'>Subscribe</button>
+            </span>
+          </div>
+        </form>
+        {% endif %}
+        {% endcomment %}
 
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
+          <div class="alert alert-success hidden" id="newsletterSuccess">
+            <strong>Success!</strong> You've been added to our email list.
+          </div>
+
+          <div class="alert alert-danger hidden" id="newsletterError"></div>
+
+        </div>
       </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+      <div class="col-md-3">
+        <h4>Latest Tweets</h4>
+        <div id="tweet" class="twitter" data-plugin-tweets data-plugin-options='{"username": "EzeraTech", "count": 2}'>
+          <a class="twitter-timeline" data-dnt="true" data-chrome="noheader nofooter noborders transparent" data-tweet-limit="3" href="https://twitter.com/EzeraTech" data-widget-id="686471147693539332">Tweets by @EzeraTech</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+      </div>
+      <div class="{% if enable_twitter_feed == 'true' %}col-md-4{% else %}col-md-7{% endif %}">
+        <div class="contact-details">
+          <h4>Contact Us</h4>
+          <ul class="contact">
+            <li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> (888) 414-1664</p></li>
+            <li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:hello@ezeratech.com">hello@ezeratech.com</a></p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <h4>Follow Us</h4>
+        {% include header-social.html %}
+        <!--
+        <ul class="social-icons">
+          <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+          <li class="social-icons-twitter"><a href="http://www.twitter.com/EzeraTech" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+          <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+        -->
       </div>
     </div>
-
   </div>
-
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <a href="/" class="logo">
+            <img alt="Porto Website Template" class="img-responsive" src="/images/Logo-Small-Website-Dark.png">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <p>© Copyright {{ now | date: '%Y' }}. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-4">
+          <nav id="sub-menu">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>

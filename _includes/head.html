@@ -1,12 +1,52 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Basic -->
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="author" content="okler.net">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+		<!-- Favicon -->
+    <link rel="shortcut icon" href="/images/Logo-icon-16x16.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="/images/Logo-icon-32x28.png">
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-</head>
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Web Fonts  -->
+		<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/vendor/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/vendor/simple-line-icons/css/simple-line-icons.min.css">
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/vendor/owl.carousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/vendor/owl.carousel/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/vendor/magnific-popup/magnific-popup.min.css">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/css/theme.css">
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/css/theme-elements.css">
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/css/theme-blog.css">
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/css/theme-shop.css">
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/css/theme-animate.css">
+
+		<!-- Current Page CSS -->
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/vendor/rs-plugin/css/settings.css" media="screen">
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/vendor/rs-plugin/css/layers.css" media="screen">
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/vendor/rs-plugin/css/navigation.css" media="screen">
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/vendor/circle-flip-slideshow/css/component.css" media="screen">
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="//cdn.ezeratech.com/themes/porto/4_4_0/css/skins/skin-corporate-7.css">
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="/css/custom.css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="/css/hero2.css" media="screen" title="no title" charset="utf-8">
+
+		<!-- Head Libs -->
+		<script src="//cdn.ezeratech.com/themes/porto/4_4_0/vendor/jquery/jquery.min.js"></script>
+		<script src="//cdn.ezeratech.com/themes/porto/4_4_0/vendor/modernizr/modernizr.min.js"></script>
+
+		<script type="text/javascript">var switchTo5x=true;</script>
+		<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+		<script type="text/javascript" src="https://ss.sharethis.com/loader.js"></script>
+	</head>

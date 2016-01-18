@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+	<body>
+
+		<div class="body">
+			{% include header-transparent-sticky.html %}
+			<div role="main" class="main">
+        {{ content }}
+      </div>
+			{% include footer.html %}
+		</div>
+		{% include foot.html %}
+	</body>
+</html>
