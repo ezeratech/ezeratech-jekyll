@@ -17,14 +17,42 @@ url: "http://www.ezeatech.com" # the base hostname & protocol for your site
 twitter_username: ezeratech
 github_username:  ezeratech
 linkedin_username: ezeratech
+gems: [jekyll-paginate, jekyll-paginate-category]
 
-permalink: /:categories/:title
+paginate: 2
+paginate_path: "page:num"
+
+category_dir: "_posts"
+category_layout: "index.html"
 
 links:
   - title: work
-    url: /work
+    url: /work/
+  - title: blog
+    url: /blog/
   - title: contact
-    url: /contact
+    url: /contact.html
 
 # Build settings
 markdown: kramdown
+
+# defaults:
+#   -
+#     scope:
+#       path: ""
+#       type: "pages"
+#     values:
+#       layout: "inner-page"
+#   -
+#     scope:
+#       path: "blog"
+#       type: "posts"
+#     values:
+#       layout: "inner-page"
+#   -
+#     scope:
+#       categories: "work"
+#       type: "posts"
+#     values:
+#       layout: "work"
+#       permalink: /work/:title.html

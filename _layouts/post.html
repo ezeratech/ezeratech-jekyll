@@ -1,3 +1,70 @@
 ---
 layout: inner-page
 ---
+<div class="row">
+  <div class="col-md-9">
+    <div class="blog-posts single-post">
+      <article class="post post-large blog-single-post">
+        <div class="post-image">
+          <div class="_owl-carousel owl-theme" data-plugin-options='{"items":1}'>
+            <div class="center">
+              <div class="img-thumbnail">
+                <img class="img-responsive" src="{{ page.featured_image }}" alt="{{ page.title }} Featured Image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post-date">
+          <span class="day">{{ page.date | date: '%d'}}</span>
+          <span class="month">{{ page.date | date: '%b'}}</span>
+        </div>
+
+        <div class="post-content">
+
+          <h2>{{ page.subtitle }}</h2>
+
+          {% include blog-entry-meta.html readmore=false post=page %}
+
+          {{ content }}
+
+          <div class="post-block post-share">
+            <h3 class="heading-primary"><i class="fa fa-share"></i>Share this post</h3>
+
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style">
+              <a class="addthis_button_facebook_like" fb:like:layout="button_count" data-proofer-ignore></a>
+              <a class="addthis_button_tweet" data-proofer-ignore></a>
+              <a class="addthis_button_pinterest_pinit" data-proofer-ignore></a>
+              <a class="addthis_counter addthis_pill_style" data-proofer-ignore></a>
+            </div>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50faf75173aadc53"></script>
+            <!-- AddThis Button END -->
+
+          </div>
+
+          <div class="post-block post-author clearfix">
+            {% assign author = site.data.people[page.author] %}
+            <h3 class="heading-primary"><i class="fa fa-user"></i>Author</h3>
+            <div class="img-thumbnail">
+              <a href="javascript:void(0)">
+                <img src="{{ author.gravatar }}" alt="{{ author.name }} Gravatar">
+              </a>
+            </div>
+            <p><strong class="name"><a href="javascript:void(0)">{{ author.name }}</a></strong></p>
+            <p>{{ author.description }} </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="col-md-3">
+   {% comment %}{% include blog_sidebar %}{% endcomment %}
+  </div>
+</div>
+
+<script type="text/javascript">stLight.options({publisher: "1eeba1b2-83b0-4b49-8d9d-854751b060dd", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+<script>
+  var options={ "publisher": "1eeba1b2-83b0-4b49-8d9d-854751b060dd", "logo": { "visible": true, "url": "", "img": "//sd.sharethis.com/disc/images/demo_logo.png", "height": 45}, "ad": { "visible": false, "openDelay": "5", "closeDelay": "0"}, "livestream": { "domain": "", "type": "sharethis"}, "ticker": { "visible": false, "domain": "", "title": "", "type": "sharethis"}, "facebook": { "visible": false, "profile": "sharethis"}, "fblike": { "visible": false, "url": ""}, "twitter": { "visible": false, "user": "sharethis"}, "twfollow": { "visible": false}, "custom": [{ "visible": false, "title": "Custom 1", "url": "", "img": "", "popup": false, "popupCustom": { "width": 300, "height": 250}}, { "visible": false, "title": "Custom 2", "url": "", "img": "", "popup": false, "popupCustom": { "width": 300, "height": 250}}, { "visible": false, "title": "Custom 3", "url": "", "img": "", "popup": false, "popupCustom": { "width": 300, "height": 250}}], "chicklets": { "items": ["facebook", "twitter", "linkedin", "pinterest", "email", "sharethis"]}};
+  var st_bar_widget = new sharethis.widgets.sharebar(options);
+</script>

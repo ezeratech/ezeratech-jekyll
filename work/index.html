@@ -1,0 +1,41 @@
+---
+layout: inner-page
+title: Work
+---
+
+<h2>A Sampling of Our Work</h2>
+
+<ul class="nav nav-pills sort-source" data-sort-id="portfolio" data-option-key="filter">
+  <li data-option-value="*" class="active"><a href="javascript:void(0)">Show All</a></li>
+  {% for tag in site.tags %}
+    <li data-option-value=".{{ tag | first }}"><a href="javascript:void(0)">{{ tag | first | replace:'-',' ' }}</a></li>
+  {% endfor %}
+</ul>
+
+<hr>
+
+<div class="row">
+
+  <ul class="portfolio-list sort-destination" data-sort-id="portfolio" style="position: relative; height: 1467px;">
+    {% for item in site.categories['work'] %}
+    <li class="col-sm-6 col-xs-12 isotope-item {{ item.tags | join: ' ' }}">
+      <div class="portfolio-item">
+        <a href="{{ item.url }}">
+          <span class="thumb-info">
+            <span class="thumb-info-wrapper">
+              {% include work-thumbnail.html item=item %}
+              <span class="thumb-info-title">
+                <span class="thumb-info-inner">{{ item.title }}</span>
+                <span class="thumb-info-type">{{ item.subtitle }}</span>
+              </span>
+              <span class="thumb-info-action">
+                <span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+              </span>
+            </span>
+          </span>
+        </a>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

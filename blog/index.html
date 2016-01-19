@@ -1,0 +1,58 @@
+---
+layout: inner-page
+title: Blog
+paginate: 2
+---
+<div class="row">
+  <div class="col-md-9">
+    <div class="blog-posts clearfix">
+
+{% for post in site.categories['blog'] %}
+<article class="post post-medium">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="post-image">
+        <div class="_owl-carousel owl-theme" data-plugin-options='{"items":1}'>
+          <div>
+            <div class="img-thumbnail">
+              <img class="img-responsive" src="{{ post.featured_image }}" alt="{{ post.title }} Featured Image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-7">
+      <div class="post-content">
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt }}</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      {% include blog-entry-meta.html post=post readmore=true %}
+    </div>
+  </div>
+</article>
+{% endfor %}
+
+{% comment %}
+<ul class="pagination pagination-lg pull-right">
+  {% if paginate.previous.is_link %}<li><a href="{{ paginate.previous.url }}">«</a></li>{% endif %}
+  {% for part in paginate.parts %}
+  <li class="{% unless part.is_link %}active{% endunless %}"><a href="{{ part.url }}">{{ part.title }}</a></li>
+  {% endfor %}
+  {% if paginate.next.is_link %}<li><a href="{{ paginate.next.url  }}">»</a></li>{% endif %}
+</ul>
+{% endcomment %}
+
+
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    {% comment %}{% include blog_sidebar %}{% endcomment %}
+  </div>
+</div>

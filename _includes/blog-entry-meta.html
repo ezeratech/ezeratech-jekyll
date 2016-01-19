@@ -1,0 +1,15 @@
+<div class="post-meta">
+  <span><i class="fa fa-calendar"></i> {{ include.post.date | date:'%b %-d, %Y' }}<!-- January 10, 2015 --> </span>
+  <span><i class="fa fa-user"></i> By <a href="javascript:void(0)">{{ site.data.people[include.post.author].name }}</a> </span>
+  {% if include.post.blog_tags.count > 0 %}
+    <span><i class="fa fa-tag"></i>
+  {% for blog_tag in include.post.blog_tags %}
+    <a href="/tag/{{ blog_tag._slug }}">{{ blog_tag.name }}</a>{%unless forloop.last %}, {% endunless %}
+  {% endfor %}
+  </span>
+  {% endif %}
+  {% comment %}<span><i class="fa fa-comments"></i> <a href="javascript:void(0)">12 Comments</a></span>{% endcomment %}
+  {% if include.readmore %}
+    <a href="{{ include.post.url }}" class="btn btn-xs btn-primary pull-right">Read more...</a>
+  {% endif %}
+</div>

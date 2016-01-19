@@ -1,0 +1,128 @@
+work parts
+<div class="row">
+  <div class="col-md-12">
+    <div class="portfolio-title">
+      <div class="row">
+        <div class="portfolio-nav-all col-md-1">
+          <a href="/work" data-tooltip data-original-title="Back to list"><i class="fa fa-th"></i></a>
+        </div>
+        <div class="col-md-10 center">
+          <h2 class="mb-none">{{ portfolio_item.client_name }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <hr class="tall">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+
+    <div class="owl-carousel owl-theme" data-plugin-options='{"items": 1, "margin": 10}'>
+      <div>
+        <span class="img-thumbnail">
+          <img alt="" class="img-responsive" src="{{ portfolio_item.thumbnail.url | resize: '447x447#' }}">
+        </span>
+      </div>
+      <!--
+      <div>
+        <span class="img-thumbnail">
+          <img alt="" class="img-responsive" src="img/projects/project-1.jpg">
+        </span>
+      </div>
+      <div>
+        <span class="img-thumbnail">
+          <img alt="" class="img-responsive" src="img/projects/project-2.jpg">
+        </span>
+      </div>
+      -->
+    </div>
+
+  </div>
+
+  <div class="col-md-8">
+
+    <div class="portfolio-info">
+      <div class="row">
+        <div class="col-md-12 center">
+          <ul>
+            <!--
+            <li>
+              <a href="#" data-tooltip data-original-title="Like"><i class="fa fa-heart"></i>14</a>
+              </li>
+            -->
+            <li>
+              <i class="fa fa-calendar"></i> 21 November 2013
+            </li>
+            <!--
+            <li>
+              <i class="fa fa-tags"></i> <a href="#">Brand</a>, <a href="#">Design</a>
+            </li>
+            -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h4 class="heading-primary">Project <strong>Description</strong></h4>
+    <p class="mt-xlg">{{ portfolio_item.description }}</p>
+
+    {% if portfolio_item.live_url %}<a href="{{ portfolio_item.live_url }}" target='_blank' class="btn btn-primary btn-icon"><i class="fa fa-external-link"></i>Live Preview</a> <span class="arrow hlb appear-animation" data-appear-animation="rotateInUpLeft" data-appear-animation-delay="800"></span>{% endif %}
+
+    <ul class="portfolio-details">
+      <li>
+        <p><strong>Skills:</strong></p>
+
+        <ul class="list list-inline list-icons">
+          {% for skill in portfolio_item.skills %}
+            <li><i class="fa fa-check-circle"></i> {{ skill }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li>
+        <p><strong>Client:</strong></p>
+        <p>{{ portfolio_item.client_name }}</p>
+      </li>
+    </ul>
+
+  </div>
+</div>
+{% comment %}
+<div class="row">
+  <div class="col-md-12">
+
+    <hr class="tall">
+
+    <h4 class="mb-md text-uppercase">Related <strong>Work</strong></h4>
+
+    <div class="row">
+
+      <ul class="portfolio-list">
+        {% for related_project in portfolio_item.related_projects %}
+        <li class="col-md-3 col-sm-6 col-xs-12">
+          <div class="portfolio-item">
+            <a href="{% path_to related_project %}">
+              <span class="thumb-info">
+                <span class="thumb-info-wrapper">
+                  <img src="{{ related_project.thumbnail.url | resize: '447x447#' }}" class="img-responsive" alt="">
+                  <span class="thumb-info-title">
+                    <span class="thumb-info-inner">{{ related_project.client_name }}</span>
+                    <span class="thumb-info-type">{{ related_project.project_type}}</span>
+                  </span>
+                  <span class="thumb-info-action">
+                    <span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+                  </span>
+                </span>
+              </span>
+            </a>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+</div>
+{% endcomment %}
+{% endblock %}
