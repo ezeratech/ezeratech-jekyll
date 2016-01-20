@@ -1,0 +1,13 @@
+test:
+  script:
+  - apt-get update -qy
+  - apt-get install -y nodejs
+  - bundle install --path /cache
+  - bundle exec rake test
+
+production:
+  type: deploy
+  script:
+  - gem install dpl
+  - apt-get update -qy
+  - dpl --provider=s3 --access-key-id=$S3_ACCESS_KEY_ID --secret-access-key=$S3_SECRET_ACCESS_KEY --bucket=$S3_BUCKET --local-dir=_site --skip_cleanup --acl=public_read
