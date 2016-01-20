@@ -19,6 +19,7 @@ github_username:  ezeratech
 linkedin_username: ezeratech
 exclude: ["Rakefile", "Gemfile*"]
 gems: [jekyll-paginate, jekyll-paginate-category]
+encoding: UTF-8
 
 paginate: 2
 paginate_path: "page:num"

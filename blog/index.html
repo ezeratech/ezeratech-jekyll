@@ -40,11 +40,11 @@ paginate: 2
 
 {% comment %}
 <ul class="pagination pagination-lg pull-right">
-  {% if paginate.previous.is_link %}<li><a href="{{ paginate.previous.url }}">«</a></li>{% endif %}
+  {% if paginate.previous.is_link %}<li><a href="{{ paginate.previous.url }}">&laquo;</a></li>{% endif %}
   {% for part in paginate.parts %}
   <li class="{% unless part.is_link %}active{% endunless %}"><a href="{{ part.url }}">{{ part.title }}</a></li>
   {% endfor %}
-  {% if paginate.next.is_link %}<li><a href="{{ paginate.next.url  }}">»</a></li>{% endif %}
+  {% if paginate.next.is_link %}<li><a href="{{ paginate.next.url  }}">&raquo;</a></li>{% endif %}
 </ul>
 {% endcomment %}
 
