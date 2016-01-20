@@ -19,7 +19,7 @@ description: A sampling of our most recent works
 <div class="row">
 
   <ul class="portfolio-list sort-destination" data-sort-id="portfolio" style="position: relative; height: 1467px;">
-    {% for item in site.categories['work'] %}
+    {% for item in site.works %}
     <li class="col-sm-6 col-xs-12 isotope-item {{ item.tags | join: ' ' }}">
       <div class="portfolio-item">
         <a href="{{ item.url }}">

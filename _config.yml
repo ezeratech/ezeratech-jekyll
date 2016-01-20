@@ -33,26 +33,24 @@ links:
   - title: contact
     url: /contact.html
 
+collections:
+  works:
+    output: true
+    permalink: /work/:path/
+
 # Build settings
 markdown: kramdown
 
-# defaults:
-#   -
-#     scope:
-#       path: ""
-#       type: "pages"
-#     values:
-#       layout: "inner-page"
-#   -
-#     scope:
-#       path: "blog"
-#       type: "posts"
-#     values:
-#       layout: "inner-page"
-#   -
-#     scope:
-#       categories: "work"
-#       type: "posts"
-#     values:
-#       layout: "work"
-#       permalink: /work/:title.html
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: 'inner-page'
+      permalink: /blog/:year/:month/:day/:title/
+  -
+    scope:
+      type: "works"
+    values:
+      layout: "work"
