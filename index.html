@@ -150,7 +150,7 @@ layout: corporate-7
 		<div class="col-md-12 center">
 			<h2 class="mb-xl">Our <strong>Services</strong></h2>
 		</div>
-    {% for service in contents.services %}
+    {% for service in site.data.services %}
       {% assign loop_cycle = forloop.index0 | modulo:2 %}
       {% if loop_cycle == 0 %}
     <div class="row {% if forloop.index0 == 0 %}pt-xl clearfix{%endif%}">
@@ -195,6 +195,7 @@ layout: corporate-7
 		</div>
 	</div>
 </section>
+{% comment %}
 <section class="section section-background section-center mt-none" style="background-image: url(//cdn.ezeratech.com/themes/porto/4_4_0/img/patterns/swirl_pattern.png);">
 	<div class="container">
 		<div class="row">
@@ -223,6 +224,7 @@ layout: corporate-7
 		</div>
 	</div>
 </section>
+{% endcomment %}
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 center mb-xl">
@@ -250,11 +252,11 @@ layout: corporate-7
 						<div class="recent-posts mt-xl">
 							<article class="post">
 								<div class="date">
-									<span class="day">{{ item.published_at | date: '%d'}}</span>
-									<span class="month background-color-secondary">{{ item.published_at | date: '%b'}}</span>
+									<span class="day">{{ item.date | date: '%d'}}</span>
+									<span class="month background-color-secondary">{{ item.date | date: '%b'}}</span>
 								</div>
 								<h4><a href="{{ item.url }}" class="text-light">{{ item.title }}</a></h4>
-								<p>{{ item.content | strip_html | truncatewords: 15 }}</p>
+								<p>{{ item.excerpt | strip_html | truncatewords: 30 }}</p>
 								<a href="{{ item.url }}" class="btn btn-secondary mt-md mb-xl">Read More</a>
 							</article>
 						</div>

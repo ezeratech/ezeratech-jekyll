@@ -1,0 +1,16 @@
+- Dedicated Teams:
+  title: Dedicated Teams
+  short_description: Your team is yours. Period.
+  icon: user
+- Hourly Developers:
+  title: Hourly Developers
+  short_description: Have a short project or just want to try us out? No Problem.
+  icon: drop
+- Agile Development:
+  title: Agile Development
+  short_description: Using the latest techniques to constantly deliver quality
+  icon: star
+- Feature Discovery:
+  title: Feature Discovery
+  short_description: We help you flesh out your idea.
+  icon: mouse

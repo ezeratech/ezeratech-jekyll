@@ -41,22 +41,26 @@
         <span class="img-thumbnail">
           <!-- 447x447 -->
           {% include work-thumbnail.html item=page %}
-          <!-- <img alt="" class="img-responsive" src="/images/work/{{ page.title | slugify }}.png"> -->
         </span>
       </div>
-      <!--
-      <div>
-        <span class="img-thumbnail">
-          <img alt="" class="img-responsive" src="img/projects/project-1.jpg">
-        </span>
-      </div>
-      <div>
-        <span class="img-thumbnail">
-          <img alt="" class="img-responsive" src="img/projects/project-2.jpg">
-        </span>
-      </div>
-      -->
     </div>
+		<ul class="portfolio-details">
+			<li>
+				<p><strong>Skills:</strong></p>
+
+				<ul class="list list-inline list-icons">
+					{% for skill in page.tags %}
+						<li><i class="fa fa-check-circle"></i> {{ skill }}</li>
+					{% endfor %}
+				</ul>
+			</li>
+			{% comment %}
+			<li>
+				<p><strong>Client:</strong></p>
+				<p>{{ portfolio_item.client_name }}</p>
+			</li>
+			{% endcomment %}
+		</ul>
     {% if page.live_url %}
     <div class="text-center">
       <a href="{{ page.live_url }}" target='_blank' class="btn btn-primary btn-icon"><i class="fa fa-external-link"></i>Live Preview</a> <span class="arrow hlb appear-animation" data-appear-animation="rotateInUpLeft" data-appear-animation-delay="800"></span>
@@ -91,24 +95,9 @@
     <h4 class="heading-primary">Project <strong>Description</strong></h4>
     <div class="mt-xlg">{{ content }}</div>
 
-    <ul class="portfolio-details">
-      <li>
-        <p><strong>Skills:</strong></p>
-
-        <ul class="list list-inline list-icons">
-          {% for skill in page.tags %}
-            <li><i class="fa fa-check-circle"></i> {{ skill }}</li>
-          {% endfor %}
-        </ul>
-      </li>
-      <li>
-        <p><strong>Client:</strong></p>
-        <p>{{ portfolio_item.client_name }}</p>
-      </li>
-    </ul>
-
   </div>
 </div>
+{% comment %}
 <div class="row">
   <div class="col-md-12">
 
@@ -144,6 +133,7 @@
     </div>
   </div>
 </div>
+{% endcomment %}
         </div>
       </div>
 			{% include footer.html %}
