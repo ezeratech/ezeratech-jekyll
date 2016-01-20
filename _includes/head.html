@@ -1,8 +1,8 @@
 <head>
+    <title>{{ page.seo_title | default: page.title }} | {{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
 		<!-- Basic -->
 		<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="author" content="okler.net">
 
 		<!-- Favicon -->
     <link rel="shortcut icon" href="/images/Logo-icon-16x16.ico" type="image/x-icon" />
@@ -51,4 +51,7 @@
 		<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
 		<script type="text/javascript" src="https://ss.sharethis.com/loader.js"></script>
     {% endcomment %}
+    {% if page.noindex == true %}
+    <meta name="robots" content="NOINDEX, NOFOLLOW">
+    {% endif %}
 	</head>
