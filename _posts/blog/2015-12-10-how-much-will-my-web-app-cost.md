@@ -63,4 +63,4 @@ After that's all done, we'll arrange for the first month of development to be pa
 
 ## Give Us a Call
 
-If you're unclear about something here, then feel free to [shoot us an email](mailto:hello@ezeratech.com) or [fill out a contact request](/contact.html). We would love to chat with you about your app and see if we can help you get started.
+If you're unclear about something here, then feel free to [shoot us an email](mailto:hello@ezeratech.com) or [fill out a contact request](/contact/). We would love to chat with you about your app and see if we can help you get started.

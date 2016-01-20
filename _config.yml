@@ -31,7 +31,7 @@ links:
   - title: blog
     url: /blog/
   - title: contact
-    url: /contact.html
+    url: /contact/
 
 collections:
   works:
