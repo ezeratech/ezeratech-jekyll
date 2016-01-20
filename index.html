@@ -132,7 +132,7 @@ seo_title: Agile Ruby on Rails Experts
 		<div class="col-md-12 center mb-xl">
 			<h2 class="mt-xl">Recent <strong>Projects</strong></h2>
       <div class="owl-carousel owl-theme mb-none" data-plugin-options='{"items": 4, "margin": 0, "loop": false}'>
-        {% for item in site.categories['work'] %}
+        {% for item in site.works %}
 				<div>
           <a href="{{ item.url }}">
             {% include work-thumbnail.html item=item %}
