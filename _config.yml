@@ -17,6 +17,7 @@ url: "http://www.ezeatech.com" # the base hostname & protocol for your site
 twitter_username: ezeratech
 github_username:  ezeratech
 linkedin_username: ezeratech
+exclude: ["Rakefile", "Gemfile*"]
 gems: [jekyll-paginate, jekyll-paginate-category]
 
 paginate: 2

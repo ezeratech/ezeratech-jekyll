@@ -1,6 +1,6 @@
 ---
 title: Firsthand Authority
-subtitle: Hospital & Medical Practice Profile Service
+subtitle: Hospital &amp; Medical Practice Profile Service
 live_url: http://physicians.firsthandauthority.com
 categories: work
 tags: ruby-on-rails heroku google-analytics bootstrap
