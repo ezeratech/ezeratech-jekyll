@@ -38,8 +38,9 @@ GEM
       typhoeus (~> 0.7)
       yell (~> 2.0)
     i18n (0.7.0)
+    jekyll-contentblocks (1.1.0)
+      jekyll
     jekyll-paginate (1.1.0)
-    jekyll-paginate-category (0.1.0)
     jekyll-responsive_image (0.14.0)
       jekyll (>= 2.0, < 4.0)
       rmagick (>= 2.0, < 3.0)
@@ -80,8 +81,8 @@ PLATFORMS
 DEPENDENCIES
   html-proofer
   jekyll!
+  jekyll-contentblocks
   jekyll-paginate
-  jekyll-paginate-category
   jekyll-responsive_image
   rake
 

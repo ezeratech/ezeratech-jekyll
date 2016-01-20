@@ -40,3 +40,13 @@
 		ga('send', 'pageview');
 	</script>
 	 -->
+
+	 <script>
+	     new Imager('.responsive-image__delayed', {
+	         availableWidths: '480,720,800,1400',
+	         onImagesReplaced: function() {
+	             $('.responsive-image__placeholder').hide();
+	         }
+	     });
+	 </script>
+	 {% contentblock footerscripts %}

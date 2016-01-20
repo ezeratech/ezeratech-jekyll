@@ -1,1 +1,6 @@
-<img alt="{{ include.item.title }} Preview" class="img-responsive" src="/images/work/{{ include.item.title | slugify }}.png">
+<!-- <img alt="{{ include.item.title }} Preview" class="img-responsive" src="/images/work/{{ include.item.title | slugify }}.png"> -->
+{% assign full_path = include.item.title | slugify | prepend: 'images/work/' | append: '.png' %}
+{% responsive_image_block %}
+  path: {{ full_path }}
+  alt: {{ include.item.title }}
+{% endresponsive_image_block %}

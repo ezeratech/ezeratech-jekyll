@@ -1,0 +1,10 @@
+{% assign smallest = resized | sort: 'width' | first %}
+
+<div class="img-responsive">
+    <img class="responsive-image__placeholder" src="/{{ smallest.path }}">
+    <div class="responsive-image__delayed" data-src="/assets/{width}/{{ original.basename }}"></div>
+</div>
+
+{% contentfor footerscripts %}
+
+{% endcontentfor %}
