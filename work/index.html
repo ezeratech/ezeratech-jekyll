@@ -9,8 +9,9 @@ description: A sampling of our most recent works
 
 <ul class="nav nav-pills sort-source" data-sort-id="portfolio" data-option-key="filter">
   <li data-option-value="*" class="active"><a href="javascript:void(0)">Show All</a></li>
-  {% for tag in site.tags %}
-    <li data-option-value=".{{ tag | first }}"><a href="javascript:void(0)">{{ tag | first | replace:'-',' ' }}</a></li>
+  {% assign all_tags = site.works | map: 'tags' | join: ' ' | split: ' ' | uniq | sort %}
+  {% for tag in all_tags %}
+    <li data-option-value=".{{ tag }}"><a href="javascript:void(0)">{{ tag | replace:'-',' ' }}</a></li>
   {% endfor %}
 </ul>
 

@@ -26,5 +26,16 @@ layout: null
         {% endfor %}
       </item>
     {% endfor %}
+    {% for work in site.works %}
+      <item>
+        <title>{{ work.title | xml_escape }}</title>
+        <description>{{ work.content | xml_escape }}</description>
+        <link>{{ work.url | prepend: site.baseurl | prepend: site.url }}</link>
+        <guid isPermaLink="true">{{ work.url | prepend: site.baseurl | prepend: site.url }}</guid>
+        {% for tag in work.tags %}
+        <category>{{ tag | xml_escape }}</category>
+        {% endfor %}
+      </item>
+    {% endfor %}
   </channel>
 </rss>
