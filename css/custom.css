@@ -1,3 +1,8 @@
+.img-responsive, span.img-thumbnail {
+    /* other definitions */
+    width:100%;
+}
+
 ul.portfolio-details{
 	margin-top: 20px;
 }
