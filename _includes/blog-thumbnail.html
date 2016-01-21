@@ -1,0 +1,4 @@
+{% responsive_image_block %}
+  path: {{ include.post.featured_image | remove_first: '/' }}
+  alt: {{ include.post.title }}
+{% endresponsive_image_block %}

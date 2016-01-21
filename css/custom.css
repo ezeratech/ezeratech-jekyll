@@ -1,10 +1,14 @@
-.img-responsive, span.img-thumbnail {
-    /* other definitions */
+.full-width, .image-replace {
+    /* included for imager.js usage */
     width:100%;
 }
 
 ul.portfolio-details{
 	margin-top: 20px;
+}
+
+.post-content .inner-content, .post-content .post-author{
+  margin-left: -60px;
 }
 /*
   * http://preview.oklerthemes.com/porto/4.4.0/index-corporate-7.html

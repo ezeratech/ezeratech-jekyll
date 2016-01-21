@@ -8,24 +8,24 @@ layout: inner-page
         <div class="post-image">
           <div class="_owl-carousel owl-theme" data-plugin-options='{"items":1}'>
             <div class="center">
-              <div class="img-thumbnail">
-                <img class="img-responsive" src="{{ page.featured_image }}" alt="{{ page.title }} Featured Image">
+              <div class="img-thumbnail full-width">
+                {% include blog-thumbnail.html post=page %}
               </div>
             </div>
           </div>
         </div>
-        <div class="post-date">
-          <span class="day">{{ page.date | date: '%d'}}</span>
-          <span class="month">{{ page.date | date: '%b'}}</span>
-        </div>
 
         <div class="post-content">
+          <div class="post-date">
+            <span class="day">{{ page.date | date: '%d'}}</span>
+            <span class="month">{{ page.date | date: '%b'}}</span>
+          </div>
 
           <h2>{{ page.subtitle }}</h2>
 
           {% include blog-entry-meta.html readmore=false post=page %}
 
-          {{ content }}
+          <div class="inner-content">{{ content }}</div>
           {% comment %}
           <div class="post-block post-share">
             <h3 class="heading-primary"><i class="fa fa-share"></i>Share this post</h3>

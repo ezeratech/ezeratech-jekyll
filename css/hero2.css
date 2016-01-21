@@ -38,6 +38,20 @@
   font-size: 12px;
 }
 
+.one-px-height{
+  height: 1px !important;
+}
+
+@media (min-width: 320px){
+  .hero-text h1{
+    font-size: 2em;
+  }
+  .hero-text h2{
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+}
+
 @media (min-width:595px){
   .hero-text h1{
     font-size: 4em;

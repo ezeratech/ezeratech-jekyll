@@ -14,9 +14,9 @@ paginate: 2
       <div class="post-image">
         <div class="_owl-carousel owl-theme" data-plugin-options='{"items":1}'>
           <div>
-            <div class="img-thumbnail">
+            <div class="img-thumbnail full-width">
               <a href="{{ post.url }}" alt="{{ post.title }}">
-                <img class="img-responsive" src="{{ post.featured_image }}" alt="{{ post.title }} Featured Image">
+                {% include blog-thumbnail.html post=post %}
               </a>
             </div>
           </div>
