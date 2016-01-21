@@ -16,7 +16,7 @@ twitter_username: ezeratech
 github_username:  ezeratech
 linkedin_username: ezeratech
 exclude: ["Rakefile", "Gemfile*"]
-gems: [jekyll-paginate, jekyll-contentblocks]
+gems: [jekyll-paginate, jekyll-contentblocks, jekyll-assets]
 encoding: UTF-8
 
 paginate: 2
@@ -64,3 +64,19 @@ responsive_image:
     - width: 480
     - width: 720
     - width: 800
+
+assets:
+  prefix: "/assets"
+  compress:
+    css: true
+    js: true
+  assets:
+    - "custom.css"
+    - "hero2.css"
+  sources:
+    - "_assets/css"
+    - "_assets/images"
+
+compress_html:
+  ignore:
+    envs: [development]
