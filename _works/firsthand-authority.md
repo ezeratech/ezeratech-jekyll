@@ -2,9 +2,7 @@
 title: Firsthand Authority
 subtitle: Hospital &amp; Medical Practice Profile Service
 live_url: http://physicians.firsthandauthority.com
-categories: work
 tags: ruby-on-rails heroku google-analytics bootstrap
-layout: work
 ---
 
 Our client came to us with a bone to pick: Healthgrades.com is less about getting patients the correct information and more about getting patients to view and click on advertisements. He wanted to create a paid-for service that would allow hospitals and medical practices to create an SEO-optimized portal that was patient-focused, not ad-focused.

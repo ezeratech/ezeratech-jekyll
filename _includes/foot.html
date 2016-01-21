@@ -40,3 +40,14 @@
 		ga('send', 'pageview');
 	</script>
 	 -->
+
+	 <script>
+     new Imager('.responsive-image__delayed', {
+       onResize: true,
+       availableWidths: [300,480,720,800,1400],
+       onImagesReplaced: function() {
+         $('.responsive-image__placeholder').hide();
+         console.log('image src replaced');
+       }
+     });
+	 </script>

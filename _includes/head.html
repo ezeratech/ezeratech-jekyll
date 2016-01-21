@@ -51,6 +51,10 @@
 		<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
 		<script type="text/javascript" src="https://ss.sharethis.com/loader.js"></script>
     {% endcomment %}
+
+    <!-- need to include imager before the body tag is parsed -->
+    <script src="/scripts/Imager.min.js"></script>
+
     {% if page.noindex == true %}
     <meta name="robots" content="NOINDEX, NOFOLLOW">
     {% endif %}

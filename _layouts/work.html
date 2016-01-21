@@ -19,12 +19,23 @@
                     <h2 class="mb-none">{{ page.subtitle }}</h2>
                   </div>
                   <div class="portfolio-nav col-md-1">
-{% if page.previous_in_category != nil %}
-										<a href="{{ page.previous_in_category.url }}" class="portfolio-nav-prev" data-tooltip="" data-original-title="Previous"><i class="fa fa-chevron-left"></i></a>
-{% endif %}
-{% if page.next_in_category != nil %}
-										<a href="{{ page.next_in_category.url }}" class="portfolio-nav-next" data-tooltip="" data-original-title="Next"><i class="fa fa-chevron-right"></i></a>
-{% endif %}
+										{% for item in site.works %}
+										{% unless current_index > -1 %}
+										{% unless forloop.first %}{% assign previous_index = forloop.index0 | minus: 1 %}{% endunless %}
+										{% assign next_index = forloop.index0 | plus: 1 %}
+										{% if item.title == page.title %}
+										{% assign current_index = forloop.index0 %}
+										{% endif %}
+										{% endunless %}
+										{% endfor %}
+										{% assign previous_item = site.works[previous_index] | default: site.works.last %}
+										{% assign next_item = site.works[next_index] | default: site.works.first %}
+										{% if previous_item != nil %}
+											<a href="{{ previous_item.url }}" class="portfolio-nav-prev" data-tooltip="" data-original-title="{{ previous_item.title }}"><i class="fa fa-chevron-left"></i></a>
+										{% endif %}
+										{% if next_item != nil %}
+											<a href="{{ next_item.url }}" class="portfolio-nav-next" data-tooltip="" data-original-title="{{ next_item.title }}"><i class="fa fa-chevron-right"></i></a>
+										{% endif %}
 									</div>
                 </div>
               </div>
@@ -35,10 +46,9 @@
 
 <div class="row">
   <div class="col-md-4">
-
     <div class="owl-carousel owl-theme" data-plugin-options='{"items": 1, "margin": 10}'>
       <div>
-        <span class="img-thumbnail">
+        <span class="img-thumbnail full-width">
           <!-- 447x447 -->
           {% include work-thumbnail.html item=page %}
         </span>

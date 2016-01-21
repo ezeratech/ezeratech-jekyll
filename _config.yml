@@ -16,7 +16,7 @@ twitter_username: ezeratech
 github_username:  ezeratech
 linkedin_username: ezeratech
 exclude: ["Rakefile", "Gemfile*"]
-gems: [jekyll-paginate, jekyll-paginate-category]
+gems: [jekyll-paginate, jekyll-contentblocks]
 encoding: UTF-8
 
 paginate: 2
@@ -54,3 +54,14 @@ defaults:
       type: "works"
     values:
       layout: "work"
+
+responsive_image:
+  template: _includes/responsive-image.html
+  base_path: images
+  output_path_format: assets/%{width}/%{basename}
+  sizes:
+    - width: 300
+    - width: 480
+    - width: 720
+    - width: 800
+    - width: 1400

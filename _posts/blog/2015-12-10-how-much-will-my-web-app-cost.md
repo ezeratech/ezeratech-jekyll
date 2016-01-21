@@ -1,5 +1,6 @@
 ---
 title:  How Much is My Web App Going To Cost
+subtitle: Answering the Burning Question
 featured_image: /images/blog-assets/money-tree.png
 categories: blog
 layout: post
