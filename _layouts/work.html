@@ -1,51 +1,42 @@
 ---
-layout: compress
+layout: inner-page
 ---
-<!DOCTYPE html>
-<html>
-	{% include head.html %}
-	<body>
-
-		<div class="body">
-			{% include header-narrow.html %}
-			<div role="main" class="main">
-        {% include breadcrumb.html %}
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="portfolio-title">
-                <div class="row">
-                  <div class="portfolio-nav-all col-md-1">
-                    <a href="/work/" data-tooltip data-original-title="Back to list"><i class="fa fa-th"></i></a>
-                  </div>
-                  <div class="col-md-10 center">
-                    <h2 class="mb-none">{{ page.subtitle }}</h2>
-                  </div>
-                  <div class="portfolio-nav col-md-1">
-										{% for item in site.works %}
-										{% unless current_index > -1 %}
-										{% unless forloop.first %}{% assign previous_index = forloop.index0 | minus: 1 %}{% endunless %}
-										{% assign next_index = forloop.index0 | plus: 1 %}
-										{% if item.title == page.title %}
-										{% assign current_index = forloop.index0 %}
-										{% endif %}
-										{% endunless %}
-										{% endfor %}
-										{% assign previous_item = site.works[previous_index] | default: site.works.last %}
-										{% assign next_item = site.works[next_index] | default: site.works.first %}
-										{% if previous_item != nil %}
-											<a href="{{ previous_item.url }}" class="portfolio-nav-prev" data-tooltip="" data-original-title="{{ previous_item.title }}"><i class="fa fa-chevron-left"></i></a>
-										{% endif %}
-										{% if next_item != nil %}
-											<a href="{{ next_item.url }}" class="portfolio-nav-next" data-tooltip="" data-original-title="{{ next_item.title }}"><i class="fa fa-chevron-right"></i></a>
-										{% endif %}
-									</div>
-                </div>
-              </div>
-
-              <hr class="tall">
-            </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="portfolio-title">
+        <div class="row">
+          <div class="portfolio-nav-all col-md-1">
+            <a href="/work/" data-tooltip data-original-title="Back to list"><i class="fa fa-th"></i></a>
+          </div>
+          <div class="col-md-10 center">
+            <h2 class="mb-none">{{ page.subtitle }}</h2>
+          </div>
+          <div class="portfolio-nav col-md-1">
+						{% for item in site.works %}
+						{% unless current_index > -1 %}
+						{% unless forloop.first %}{% assign previous_index = forloop.index0 | minus: 1 %}{% endunless %}
+						{% assign next_index = forloop.index0 | plus: 1 %}
+						{% if item.title == page.title %}
+						{% assign current_index = forloop.index0 %}
+						{% endif %}
+						{% endunless %}
+						{% endfor %}
+						{% assign previous_item = site.works[previous_index] | default: site.works.last %}
+						{% assign next_item = site.works[next_index] | default: site.works.first %}
+						{% if previous_item != nil %}
+							<a href="{{ previous_item.url }}" class="portfolio-nav-prev" data-tooltip="" data-original-title="{{ previous_item.title }}"><i class="fa fa-chevron-left"></i></a>
+						{% endif %}
+						{% if next_item != nil %}
+							<a href="{{ next_item.url }}" class="portfolio-nav-next" data-tooltip="" data-original-title="{{ next_item.title }}"><i class="fa fa-chevron-right"></i></a>
+						{% endif %}
+					</div>
         </div>
+      </div>
+
+      <hr class="tall">
+    </div>
+</div>
 
 <div class="row">
   <div class="col-md-4">
@@ -147,10 +138,3 @@ layout: compress
   </div>
 </div>
 {% endcomment %}
-        </div>
-      </div>
-			{% include footer.html %}
-		</div>
-		{% include foot.html %}
-	</body>
-</html>

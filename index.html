@@ -1,185 +1,189 @@
 ---
-layout: corporate-7
+layout: default
 seo_title: Agile Ruby on Rails Experts
 ---
+	{% include header-transparent-sticky.html %}
+	<div role="main" class="main">
 
-<div class="_row hero-container">
-  <!--
-  <div class="hero-title">
-    <p>Handcrafted Web Apps</p>
-  </div>
-  -->
-  <div class="_col-xs-3 _col-xs-offset-1 hero-text">
-    <div class="container">
-      <h1>Custom Web Apps</h1>
-      <h2>Agile / Test-Driven<span class="hidden-xs">&nbsp;/&nbsp;</span><div class="visible-xs one-px-height"><br/></div>Customer-Centered</h2>
-      <p class="lead text-light"></p>
-    </div>
-  </div>
-  <div class="_col-xs-8 hero-unit">
-  </div>
-</div>
-<div class="home-intro home-intro-primary" id="home-intro">
-	<div class="container">
-
-		<div class="row">
-			<div class="col-md-8">
-				<p>
-          Get your idea to your customer
-        <em class="text-light">
-          Faster
-        </em>
-        <span class="text-light">
-          ... and with more confidence
-        </span>
-				</p>
-
-			</div>
-			<div class="col-md-4">
-				<div class="get-started">
-					<a href="/contact/" class="btn btn-lg btn-secondary">Get Started Now!</a>
-          <!--
-					<div class="learn-more text-light">or <a href="/get-started" class="text-light">learn more.</a></div>
-          -->
-				</div>
-			</div>
-		</div>
-
-	</div>
-</div>
-<div class="container">
-	<div class="row mb-lg">
-		<div class="col-md-12 center">
-			<h2 class="mb-xl">Our <strong>Services</strong></h2>
-		</div>
-    {% for service in site.data.services %}
-      {% assign loop_cycle = forloop.index0 | modulo:2 %}
-      {% if loop_cycle == 0 %}
-    <div class="row {% if forloop.index0 == 0 %}pt-xl clearfix{%endif%}">
-      {% endif %}
-			<div class="col-md-6">
-        <div class="feature-box feature-box-style-2 {% cycle 'reverse', '' %} appear-animation" data-appear-animation="fadeIn{% cycle 'Left', 'Right' %}" data-appear-animation-delay="{{ forloop.index0 | divided_by:2 | times:300 }}">
-					<div class="feature-box-icon">
-            <i class="icon-{{ service.icon }} icons text-color-quaternary"></i>
-					</div>
-					<div class="feature-box-info">
-            <h4 class="mb-sm">{{ service.title }}</h4>
-            <p class="mb-lg">{{ service.short_description }}</p>
-					</div>
-				</div>
-			</div>
-      {% if loop_cycle == 1 %}
-    </div>
-      {% endif %}
-    {% endfor %}
-    <!--
-		<div class="col-md-12 center mt-xl mb-sm">
-			<a class="btn btn-secondary mr-xs mb-sm appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="900">View More</a>
-		</div>
-    -->
-	</div>
-</div>
-<section class="section section-tertiary pb-none mb-none">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-7">
-        <h2 class="text-light"><strong>Who</strong> We Are</h2>
-				<p class="text-light">
-          EzeraTech is a group of Americans and Malaysians who are committed to producing the best possible software solutions for our clients.  We respect diversity and seek to value both our customers and our employees.
-        </p>
-        <!--
-          <a class="btn btn-secondary mt-lg mb-sm">View More</a>
-        -->
-			</div>
-			<div class="col-md-4 col-md-offset-1">
-        {% responsive_image path: images/ezeratech-team.jpg, alt: "The EzeraTech Team" %}
-				<!-- <img class="img-responsive appear-animation" src="/images/ezeratech-team.jpg" alt="The EzeraTech Team" data-appear-animation="fadeInUp"> -->
-			</div>
-		</div>
-	</div>
-</section>
-{% comment %}
-<section class="section section-background section-center mt-none" style="background-image: url(//cdn.ezeratech.com/themes/porto/4_4_0/img/patterns/swirl_pattern.png);">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
-				<h2 class="heading-dark mt-xl">Our <strong>Clients</strong></h2>
-				<div class="owl-carousel owl-theme nav-bottom rounded-nav" data-plugin-options='{"items": 1, "loop": false}'>
-          {% for item in contents.testimonials %}
-					<div>
-						<div class="col-md-12">
-							<div class="testimonial testimonial-style-2 testimonial-with-quotes mb-none">
-								<div class="testimonial-author">
-                  <img src="{{ item.thumbnail.url | resize: '120x120#' }}" class="img-responsive img-circle" alt="">
-								</div>
-								<blockquote>
-                  <p>{{ item.quote }}</p>
-								</blockquote>
-								<div class="testimonial-author">
-                  <p><strong>{{ item.name }}</strong><span>{{ item.subtitle }}</span></p>
-								</div>
-							</div>
-						</div>
-					</div>
-          {% endfor %}
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-{% endcomment %}
-<div class="container">
-	<div class="row">
-		<div class="col-md-12 center mb-xl">
-			<h2 class="mt-xl">Recent <strong>Projects</strong></h2>
-      <div class="owl-carousel owl-theme mb-none" data-plugin-options='{"items": 4, "margin": 0, "loop": false}'>
-        {% for item in site.works %}
-				<div>
-          <a href="{{ item.url }}">
-            {% include work-thumbnail.html item=item %}
-					</a>
-				</div>
-        {% endfor %}
-			</div>
-		</div>
-	</div>
-</div>
-<section class="section section-primary">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h2 class="mb-xs">Our <strong>Blog</strong></h2>
-				<div class="row">
-					{% for item in site.categories['blog'] %}
-					<div class="col-md-4">
-						<div class="recent-posts mt-xl">
-							<article class="post">
-								<div class="date">
-									<span class="day">{{ item.date | date: '%d'}}</span>
-									<span class="month background-color-secondary">{{ item.date | date: '%b'}}</span>
-								</div>
-								<h4><a href="{{ item.url }}" class="text-light">{{ item.title }}</a></h4>
-								<p>{{ item.excerpt | strip_html | truncatewords: 30 }}</p>
-								<a href="{{ item.url }}" class="btn btn-secondary mt-md mb-xl">Read More</a>
-							</article>
-						</div>
-					</div>
-					{% endfor %}
-				</div>
-			</div>
-			<div class="col-md-6">
-			</div>
-		</div>
-	</div>
-</section>
-<div class="container">
-	<div class="row center mt-xl">
-		<div class="owl-carousel owl-theme" data-plugin-options='{"items": 6, "autoplay": true, "autoplayTimeout": 3000}'>
-      {% for capability in contents.capabilities %}
-			<div>
-          <img class="img-responsive" src="{{ capability.grayscale_image.url }}" alt="">
+    <div class="_row hero-container">
+      <!--
+      <div class="hero-title">
+        <p>Handcrafted Web Apps</p>
+      </div>
+      -->
+      <div class="_col-xs-3 _col-xs-offset-1 hero-text">
+        <div class="container">
+          <h1>Custom Web Apps</h1>
+          <h2>Agile / Test-Driven<span class="hidden-xs">&nbsp;/&nbsp;</span><div class="visible-xs one-px-height"><br/></div>Customer-Centered</h2>
+          <p class="lead text-light"></p>
         </div>
+      </div>
+      <div class="_col-xs-8 hero-unit">
+      </div>
+    </div>
+    <div class="home-intro home-intro-primary" id="home-intro">
+    	<div class="container">
+
+    		<div class="row">
+    			<div class="col-md-8">
+    				<p>
+              Get your idea to your customer
+            <em class="text-light">
+              Faster
+            </em>
+            <span class="text-light">
+              ... and with more confidence
+            </span>
+    				</p>
+
+    			</div>
+    			<div class="col-md-4">
+    				<div class="get-started">
+    					<a href="/contact/" class="btn btn-lg btn-secondary">Get Started Now!</a>
+              <!--
+    					<div class="learn-more text-light">or <a href="/get-started" class="text-light">learn more.</a></div>
+              -->
+    				</div>
+    			</div>
+    		</div>
+
+    	</div>
+    </div>
+    <div class="container">
+    	<div class="row mb-lg">
+    		<div class="col-md-12 center">
+    			<h2 class="mb-xl">Our <strong>Services</strong></h2>
+    		</div>
+        {% for service in site.data.services %}
+          {% assign loop_cycle = forloop.index0 | modulo:2 %}
+          {% if loop_cycle == 0 %}
+        <div class="row {% if forloop.index0 == 0 %}pt-xl clearfix{%endif%}">
+          {% endif %}
+    			<div class="col-md-6">
+            <div class="feature-box feature-box-style-2 {% cycle 'reverse', '' %} appear-animation" data-appear-animation="fadeIn{% cycle 'Left', 'Right' %}" data-appear-animation-delay="{{ forloop.index0 | divided_by:2 | times:300 }}">
+    					<div class="feature-box-icon">
+                <i class="icon-{{ service.icon }} icons text-color-quaternary"></i>
+    					</div>
+    					<div class="feature-box-info">
+                <h4 class="mb-sm">{{ service.title }}</h4>
+                <p class="mb-lg">{{ service.short_description }}</p>
+    					</div>
+    				</div>
+    			</div>
+          {% if loop_cycle == 1 %}
+        </div>
+          {% endif %}
         {% endfor %}
-		</div>
-	</div>
-</div>
+        <!--
+    		<div class="col-md-12 center mt-xl mb-sm">
+    			<a class="btn btn-secondary mr-xs mb-sm appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="900">View More</a>
+    		</div>
+        -->
+    	</div>
+    </div>
+    <section class="section section-tertiary pb-none mb-none">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-7">
+            <h2 class="text-light"><strong>Who</strong> We Are</h2>
+    				<p class="text-light">
+              EzeraTech is a group of Americans and Malaysians who are committed to producing the best possible software solutions for our clients.  We respect diversity and seek to value both our customers and our employees.
+            </p>
+            <!--
+              <a class="btn btn-secondary mt-lg mb-sm">View More</a>
+            -->
+    			</div>
+    			<div class="col-md-4 col-md-offset-1">
+            {% responsive_image path: images/ezeratech-team.jpg, alt: "The EzeraTech Team" %}
+    				<!-- <img class="img-responsive appear-animation" src="/images/ezeratech-team.jpg" alt="The EzeraTech Team" data-appear-animation="fadeInUp"> -->
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    {% comment %}
+    <section class="section section-background section-center mt-none" style="background-image: url(//cdn.ezeratech.com/themes/porto/4_4_0/img/patterns/swirl_pattern.png);">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-10 col-md-offset-1">
+    				<h2 class="heading-dark mt-xl">Our <strong>Clients</strong></h2>
+    				<div class="owl-carousel owl-theme nav-bottom rounded-nav" data-plugin-options='{"items": 1, "loop": false}'>
+              {% for item in contents.testimonials %}
+    					<div>
+    						<div class="col-md-12">
+    							<div class="testimonial testimonial-style-2 testimonial-with-quotes mb-none">
+    								<div class="testimonial-author">
+                      <img src="{{ item.thumbnail.url | resize: '120x120#' }}" class="img-responsive img-circle" alt="">
+    								</div>
+    								<blockquote>
+                      <p>{{ item.quote }}</p>
+    								</blockquote>
+    								<div class="testimonial-author">
+                      <p><strong>{{ item.name }}</strong><span>{{ item.subtitle }}</span></p>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+              {% endfor %}
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    {% endcomment %}
+    <div class="container">
+    	<div class="row">
+    		<div class="col-md-12 center mb-xl">
+    			<h2 class="mt-xl">Recent <strong>Projects</strong></h2>
+          <div class="owl-carousel owl-theme mb-none" data-plugin-options='{"items": 4, "margin": 0, "loop": false}'>
+            {% for item in site.works %}
+    				<div>
+              <a href="{{ item.url }}">
+                {% include work-thumbnail.html item=item %}
+    					</a>
+    				</div>
+            {% endfor %}
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <section class="section section-primary">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-12">
+    				<h2 class="mb-xs">Our <strong>Blog</strong></h2>
+    				<div class="row">
+    					{% for item in site.categories['blog'] %}
+    					<div class="col-md-4">
+    						<div class="recent-posts mt-xl">
+    							<article class="post">
+    								<div class="date">
+    									<span class="day">{{ item.date | date: '%d'}}</span>
+    									<span class="month background-color-secondary">{{ item.date | date: '%b'}}</span>
+    								</div>
+    								<h4><a href="{{ item.url }}" class="text-light">{{ item.title }}</a></h4>
+    								<p>{{ item.excerpt | strip_html | truncatewords: 30 }}</p>
+    								<a href="{{ item.url }}" class="btn btn-secondary mt-md mb-xl">Read More</a>
+    							</article>
+    						</div>
+    					</div>
+    					{% endfor %}
+    				</div>
+    			</div>
+    			<div class="col-md-6">
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <div class="container">
+    	<div class="row center mt-xl">
+    		<div class="owl-carousel owl-theme" data-plugin-options='{"items": 6, "autoplay": true, "autoplayTimeout": 3000}'>
+          {% for capability in contents.capabilities %}
+    			<div>
+              <img class="img-responsive" src="{{ capability.grayscale_image.url }}" alt="">
+            </div>
+            {% endfor %}
+    		</div>
+    	</div>
+    </div>
+
+  </div>

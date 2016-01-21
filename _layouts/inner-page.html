@@ -1,21 +1,10 @@
 ---
-layout: compress
+layout: default
 ---
-<!DOCTYPE html>
-<html>
-	{% include head.html %}
-	<body>
-
-		<div class="body">
-			{% include header-narrow.html %}
-			<div role="main" class="main">
-        {% include breadcrumb.html %}
-        <div class="container">
-          {{ content }}
-        </div>
-      </div>
-			{% include footer.html %}
-		</div>
-		{% include foot.html %}
-	</body>
-</html>
+{% include header-narrow.html %}
+<div role="main" class="main">
+  {% include breadcrumb.html %}
+  <div class="container">
+    {{ content }}
+  </div>
+</div>
