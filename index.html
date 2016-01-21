@@ -50,7 +50,7 @@ seo_title: Agile Ruby on Rails Experts
     	</div>
     </div>
     <div class="container">
-    	<div class="row mb-lg">
+    	<div class="row mb-lg text-center-xs text-left-sm">
     		<div class="col-md-12 center">
     			<h2 class="mb-xl">Our <strong>Services</strong></h2>
     		</div>
@@ -59,7 +59,7 @@ seo_title: Agile Ruby on Rails Experts
           {% if loop_cycle == 0 %}
         <div class="row {% if forloop.index0 == 0 %}pt-xl clearfix{%endif%}">
           {% endif %}
-    			<div class="col-md-6">
+    			<div class="col-sm-6">
             <div class="feature-box feature-box-style-2 {% cycle 'reverse', '' %} appear-animation" data-appear-animation="fadeIn{% cycle 'Left', 'Right' %}" data-appear-animation-delay="{{ forloop.index0 | divided_by:2 | times:300 }}">
     					<div class="feature-box-icon">
                 <i class="icon-{{ service.icon }} icons text-color-quaternary"></i>
@@ -84,7 +84,7 @@ seo_title: Agile Ruby on Rails Experts
     <section class="section section-tertiary pb-none mb-none">
     	<div class="container">
     		<div class="row">
-    			<div class="col-md-7">
+    			<div class="col-md-7 col-sm-6">
             <h2 class="text-light"><strong>Who</strong> We Are</h2>
     				<p class="text-light">
               EzeraTech is a group of Americans and Malaysians who are committed to producing the best possible software solutions for our clients.  We respect diversity and seek to value both our customers and our employees.
@@ -93,7 +93,7 @@ seo_title: Agile Ruby on Rails Experts
               <a class="btn btn-secondary mt-lg mb-sm">View More</a>
             -->
     			</div>
-    			<div class="col-md-4 col-md-offset-1">
+    			<div class="col-md-4 col-md-offset-1 col-sm-6">
             {% responsive_image path: images/ezeratech-team.jpg, alt: "The EzeraTech Team" %}
     				<!-- <img class="img-responsive appear-animation" src="/images/ezeratech-team.jpg" alt="The EzeraTech Team" data-appear-animation="fadeInUp"> -->
     			</div>
