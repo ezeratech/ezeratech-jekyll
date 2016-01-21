@@ -5,7 +5,6 @@ test:
   - apt-get install -y nodejs
   - gem install bundler
   - bundle install --path /cache
-  - bundle exec jekyll build
   - bundle exec rake test
 
 production:
@@ -15,7 +14,6 @@ production:
   - apt-get update -qy
   - gem install bundler
   - bundle install --path /cache
-  - bundle exec jekyll build
   - bundle exec jekyll build
   - dpl --provider=s3 --access-key-id=$S3_ACCESS_KEY_ID --secret-access-key=$S3_SECRET_ACCESS_KEY --bucket=$S3_BUCKET --local-dir=_site --skip_cleanup --acl=public_read
   only:
