@@ -28,8 +28,8 @@ category_layout: "index.html"
 links:
   - title: work
     url: /work/
-  - title: blog
-    url: /blog/
+  # - title: blog
+  #   url: /blog/
   - title: contact
     url: /contact/
 
